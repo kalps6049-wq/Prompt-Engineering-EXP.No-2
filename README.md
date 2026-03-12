@@ -8,19 +8,18 @@ SCENARIO:
 
 You are part of a content curation team for an educational platform that delivers quick summaries of research papers to undergraduate students. Your task is to summarize a 500-word technical article on "The Basics of Blockchain Technology" using multiple AI platforms and prompting strategies.
 
-EX-02:Cross-Platform-Prompting-Evaluating-Diverse
-Techniques-in-AI-Powered-Text-Summarization 
 AI TOOLS USED IN THE EXPERIMENT ARE: 
- CHATGPT 
- PERPLEXITY 
- CLAUDE 
+         CHATGPT 
+         PERPLEXITY 
+         CLAUDE 
 PROMPTS USED TO COMPARE THESE AI TOOLS ARE: 
- ZERO SHOT PROMPT 
- FEW SHOT PROMPT 
- CHAIN OF THOUGHTS 
- ROLE BASED 
+         ZERO SHOT PROMPT 
+         FEW SHOT PROMPT 
+         CHAIN OF THOUGHTS 
+         ROLE BASED 
 CHATGPT: 
 Prompt given for zero shot: 
+
 Summarize this paragraph into 100-150 words: 
 “Blockchain technology is a digital system used to record and store 
 information in a secure, transparent, and decentralized way. Unlike 
@@ -58,7 +57,9 @@ blockchain is being explored in industries such as finance, healthcare,
 logistics, and government services. Although it still faces challenges like 
 scalability and energy consumption, many experts believe blockchain will 
 play a major role in the future of digital systems and data management.” 
+
 ANSWER GIVEN: 
+
 Blockchain technology is a decentralized digital system used to record and 
 store transactions securely across a network of computers. Instead of 
 relying on a central authority, the data is maintained by multiple nodes that 
@@ -72,6 +73,7 @@ security, and immutability. Although blockchain became popular through
 Bitcoin, it is now used in many fields such as supply chain management, 
 digital identity systems, and smart contracts to improve trust, eAiciency, 
 and reliability in digital transaction.” 
+
 Prompt given for Few shot: 
 Example 1 
 Input: 
@@ -85,6 +87,7 @@ tasks that usually require human intelligence. It can learn from data,
 identify patterns, and make decisions. AI is widely used in areas such as 
 healthcare, education, and transportation to improve eAiciency and 
 accuracy. 
+
 Example 2 
 Input: 
 Cloud computing is a technology that allows users to store and access 
@@ -96,6 +99,7 @@ Cloud computing allows users to store and access data through the
 internet rather than using local devices. It provides services like storage, 
 servers, and software online. This technology helps businesses reduce 
 costs, improve flexibility, and access information from anywhere. 
+
 Now summarize the following text: 
 Input Text: 
 “Blockchain technology is a digital system used to record and store 
@@ -127,6 +131,7 @@ blockchain is used in industries like finance, healthcare, logistics, and
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
 future digital systems.” 
+
 Output text: 
 Blockchain technology is a decentralized digital system used to securely 
 store and record information across a network of computers. Instead of 
@@ -141,7 +146,8 @@ blockchain include transparency, security, and immutability. The
 technology became widely known through Bitcoin, but it is now used in 
 many sectors such as finance, healthcare, logistics, and government 
 services. Smart contracts further enhance blockchain by automatically 
-executing agreements when specific conditions are met. 
+executing agreements when specific conditions are met.
+
 Prompt given for chain of thoughts: 
 “Blockchain technology is a digital system used to record and store 
 information in a secure, transparent, and decentralized way. Unlike 
@@ -193,6 +199,7 @@ eAiciency, and transparency in digital transactions. Although the
 technology is still evolving and faces challenges such as scalability and 
 energy consumption, many experts believe that blockchain will play an 
 important role in the future of digital systems and data management.” 
+
 Answer given: 
 Blockchain technology is a decentralized digital system used to securely 
 record and store transactions across a network of computers. Instead of 
@@ -208,9 +215,11 @@ immutability. The technology became widely known through Bitcoin, but it
 is also used in many areas such as supply chain management, digital 
 identity verification, smart contracts, and other industries to improve 
 security and eAiciency. 
+
 Prompt given for role based: 
 Role: You are a technology educator explaining complex topics to 
 undergraduate students. 
+
 Task: Read the given passage and summarize it in 100–150 words using 
 simple and clear language. Focus on the main ideas of blockchain, how 
 it works, its key features, and its applications. 
@@ -265,7 +274,9 @@ eAiciency, and transparency in digital transactions. Although the
 technology is still evolving and faces challenges such as scalability and 
 energy consumption, many experts believe that blockchain will play an 
 important role in the future of digital systems and data management.” 
+
 Summary (100–150 words) 
+
 Blockchain technology is a decentralized digital system used to securely 
 record and store information across a network of computers. Instead of 
 relying on a central authority like a bank, multiple computers called node 
@@ -278,9 +289,12 @@ such as proof of work or proof of stake. Key features of blockchain include
 decentralization, transparency, and immutability. The technology became 
 widely known through Bitcoin, but it is also used in areas like supply chain 
 management, digital identity verification, and smart contracts to improve 
-trust, eAiciency, and security in digital systems. 
+trust, eAiciency, and security in digital systems.
+
 PERPLEXITY: 
-Prompt given for zero shot : 
+
+Prompt given for zero shot :
+
 Input text: 
 Summarize this para into 100-150 words: 
 “"Blockchain technology is a digital system used to record and store 
@@ -332,7 +346,8 @@ and government services. It has the potential to improve security,
 eAiciency, and transparency in digital transactions. Although the 
 technology is still evolving and faces challenges such as scalability and 
 energy consumption, many experts believe that blockchain will play an 
-important role in the future of digital systems and data management. "    
+important role in the future of digital systems and data management. "
+
 Output text: 
 Blockchain technology is a secure, transparent, decentralized digital ledger 
 that records transactions across a network of computers (nodes), unlike 
@@ -349,6 +364,7 @@ conditions are met. Initially popularized by Bitcoin, blockchain now spans
 f
 inance, healthcare, logistics, and more, enhancing security and eAiciency 
 despite challenges like scalability and energy use.  (128 words) 
+
 Prompt given for Few shot: 
 "Summarize the given passage into 100–150 words using simple language 
 suitable for undergraduate students. 
@@ -371,6 +387,7 @@ Cloud computing is a technology that allows users to store and access
 data over the internet instead of on local computers. It provides services 
 such as storage, servers, and software through online platforms. Cloud 
 computing helps organizations reduce costs and improve accessibility. 
+
 Output: 
 Cloud computing allows users to store and access data through the 
 internet rather than using local devices. It provides services like storage, 
@@ -406,7 +423,8 @@ automatically perform actions when certain conditions are met. Today,
 blockchain is used in industries like finance, healthcare, logistics, and 
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
-future digital systems.”  
+future digital systems.” 
+
 Output text: 
 Blockchain technology is a secure, decentralized way to record and store 
 data across many computers, called nodes, instead of using a central 
@@ -422,6 +440,7 @@ actions when conditions are met, like releasing payment after delivery.
 Famous from Bitcoin, it's now used in finance, healthcare, logistics, and 
 more for better security and eAiciency, despite issues like high energy use. 
 (132 words) 
+
 Prompt given for chain of thoughts: 
 Input text: 
 “Blockchain technology is a digital system used to record and store 
@@ -453,6 +472,7 @@ blockchain is used in industries like finance, healthcare, logistics, and
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
 future digital systems.” 
+
 Output text: 
 Step 1: Identify main topic and structure. 
 The passage explains blockchain basics: definition, how it diAers from 
@@ -486,6 +506,7 @@ transparency (viewable records) and immutability (unchangeable data).
 Smart contracts auto-execute when conditions met, like payments on 
 delivery. Used in finance, healthcare, logistics; faces scalability and energy 
 hurdles but promises big future impact. (138 words) 
+
 Prompt given for role based: 
 Input text: 
 Assuming role: Role: You are a technology educator explaining 
@@ -524,7 +545,8 @@ automatically perform actions when certain conditions are met. Today,
 blockchain is used in industries like finance, healthcare, logistics, and 
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
-future digital systems."    
+future digital systems."
+
 Output text: 
 Blockchain acts like a tamper-proof digital notebook shared across many 
 computers, not controlled by one boss like a bank. These computers, or 
@@ -539,7 +561,9 @@ contracts that auto-run deals, like paying for goods on arrival. Industries
 like finance, health, and shipping love it for speed and safety, though 
 scaling up and energy use are hurdles. Blockchain will reshape our digital 
 world. (142 words) 
+
 CLAUDE: 
+
 Prompt given for zero shot: 
 Input text: 
 “Blockchain technology is a digital system used to record and store 
@@ -592,6 +616,7 @@ eAiciency, and transparency in digital transactions. Although the
 technology is still evolving and faces challenges such as scalability and 
 energy consumption, many experts believe that blockchain will play an 
 important role in the future of digital systems and data management.” 
+
 Output text: 
 Blockchain is a decentralized digital ledger that records transactions 
 across a peer-to-peer network without a central authority. Data is stored in 
@@ -608,6 +633,7 @@ cryptocurrency, smart contracts, and enterprise scalability. Today, its
 applications extend well beyond finance into healthcare, supply chain, and 
 digital identity, oAering businesses a trusted, eAicient single source of 
 truth. 
+
 Prompt given for Few shot: 
 Input text: 
 “"Summarize the given passage into 100–150 words using simple language 
@@ -667,6 +693,7 @@ blockchain is used in industries like finance, healthcare, logistics, and
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
 future digital systems.”  
+
 Output text: 
 Blockchain technology is a secure, decentralized way to record and store 
 data across many computers, called nodes, instead of using a central 
@@ -681,6 +708,7 @@ records) and immutability (no easy changes). Smart contracts automate
 actions when conditions are met, like releasing payment after delivery. 
 Famous from Bitcoin, it's now used in finance, healthcare, logistics, and 
 more for better security and eAiciency, despite issues like high energy use. 
+
 Prompt given for chain of thoughts: 
 Input text: 
 “Blockchain technology is a digital system used to record and store 
@@ -712,6 +740,7 @@ blockchain is used in industries like finance, healthcare, logistics, and
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
 future digital systems.” 
+
 Output text: 
 Step 1: Identify main topic and structure. 
 The passage explains blockchain basics: definition, how it diAers from 
@@ -745,6 +774,7 @@ transparency (viewable records) and immutability (unchangeable data).
 Smart contracts auto-execute when conditions met, like payments on 
 delivery. Used in finance, healthcare, logistics; faces scalability and energy 
 hurdles but promises big future impact. 
+
 Prompt given for role based: 
 Input text: 
 Assuming role: Role: You are a technology educator explaining 
@@ -784,6 +814,7 @@ blockchain is used in industries like finance, healthcare, logistics, and
 government services. Although challenges such as scalability and energy 
 consumption remain, blockchain is expected to play a significant role in 
 future digital systems."    
+
 Output text: 
 Blockchain acts like a tamper-proof digital notebook shared across many 
 computers, not controlled by one boss like a bank. These computers, or 
@@ -800,29 +831,18 @@ scaling up and energy use are hurdles. Blockchain will reshape our digital
 world. 
 RESULT: 
 ```
-Factor 
-Accuracy 
-Coherence 
-Simplicity 
-Speed 
-ChatGPT      
-9/10       
-9/10      
-9/10       
-9/10      
-User Experience 9.5/10      
-Perplexity          
-8.5/10           
-8/10           
-8.5/10           
-9.5/10           
-8.5/10           
-Claude 
-9.5/10 
-9.5/10 
-8.5/10 
-8.5/10 
-9/10
+Factor               ChatGPT            Perplexity          Claude
+                                                  
+Accuracy              9/10               8.5/10              9.5/10
+
+Coherence             9/10               8/10                9.5/10
+ 
+Simplicity            9/10               8.5/10              8.5/10
+
+Speed                 9/10               9.5/10              8.5/10
+
+User Experience       9.5/10             8.5/10              9/10
+
 ```
 RESULT:
 
