@@ -845,4 +845,5 @@ User Experience       9.5/10             8.5/10              9/10
 
 ```
 RESULT:
+       Thus, the Summarization of text using different AI tools has been done.
 
