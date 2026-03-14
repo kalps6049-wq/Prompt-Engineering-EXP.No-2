@@ -1,849 +1,150 @@
-EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization
-
-AIM:
-
-To evaluate and compare the effectiveness of prompting techniques (zero-shot, few-shot, chain-of-thought, role-based) across different AI platforms (e.g., ChatGPT, Gemini, Claude, Copilot) in a specific task: text summarization.
-
-SCENARIO:
-
-You are part of a content curation team for an educational platform that delivers quick summaries of research papers to undergraduate students. Your task is to summarize a 500-word technical article on "The Basics of Blockchain Technology" using multiple AI platforms and prompting strategies.
+EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization.
 
 AI TOOLS USED IN THE EXPERIMENT ARE: 
-         CHATGPT 
-         PERPLEXITY 
-         CLAUDE 
+                                 • CHATGPT 
+                                        • PERPLEXITY 
+                                        • CLAUDE 
 PROMPTS USED TO COMPARE THESE AI TOOLS ARE: 
-         ZERO SHOT PROMPT 
-         FEW SHOT PROMPT 
-         CHAIN OF THOUGHTS 
-         ROLE BASED 
-CHATGPT: 
-Prompt given for zero shot: 
+                                 • ZERO SHOT PROMPT 
+                                        • FEW SHOT PROMPT 
+                                        • CHAIN OF THOUGHTS 
+                                        • ROLE BASED
+PARAGRAPH PROVIDED:
+ “Blockchain technology is a digital system used to record and store information in a secure, transparent, and decentralized way. Unlike traditional databases that are controlled by a central authority such as a bank or organization, blockchain operates on a distributed network of computers. These computers, often called nodes, work together to maintain and verify a shared record of transactions. Because the data is distributed across many systems rather than stored in a single location, blockchain reduces the risk of data tampering and increases trust among users. The technology first became widely known through cryptocurrencies, especially Bitcoin, but today it is being explored for many other applications beyond digital currency. A blockchain is made up of a series of digital blocks that are connected together in chronological order to form a chain. Each block contains transaction data, a timestamp, and a unique cryptographic code called a hash. This hash links the current block to the previous one, creating a secure chain of records. If someone attempts to change the data in a block, the hash will also change, alerting the network that tampering has occurred. Because every block is connected to the one before it, altering a single block would require changing all subsequent blocks across the network, which is extremely difficult. One key feature of blockchain technology is decentralization. Instead of a central authority verifying transactions, network participants collectively verify them using a process called consensus. Mechanisms such as proof of work or proof of stake help confirm that transactions are valid before they are added permanently to the blockchain. Blockchain also oars transparency and immutability. All participants can view recorded transactions, which increases trust. Once information is added to the blockchain, it cannot easily be changed or deleted. This makes the technology useful for applications like supply chain tracking, digital identity management, and document verification. Another important concept is smart contracts. These are self-executing programs stored on the blockchain that automatically perform actions when certain conditions are met, such as transferring payment after a service is completed. Today, blockchain is being explored in industries such as finance, healthcare, logistics, and government services. Although it still faces challenges like scalability and energy consumption, many experts believe blockchain will play a major role in the future of digital systems and data management.”
 
-Summarize this paragraph into 100-150 words: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency.A blockchain is made up of a 
-series of digital blocks that are connected together in chronological order 
-to form a chain. Each block contains transaction data, a timestamp, and a 
-unique cryptographic code called a hash. This hash links the current block 
-to the previous one, creating a secure chain of records. If someone 
-attempts to change the data in a block, the hash will also change, alerting 
-the network that tampering has occurred. Because every block is 
-connected to the one before it, altering a single block would require 
-changing all subsequent blocks across the network, which is extremely 
-diAicult.One key feature of blockchain technology is decentralization. 
-Instead of a central authority verifying transactions, network participants 
-collectively verify them using a process called consensus. Mechanisms 
-such as proof of work or proof of stake help confirm that transactions are 
-valid before they are added permanently to the blockchain. Blockchain also 
-oAers transparency and immutability. All participants can view recorded 
-transactions, which increases trust. Once information is added to the 
-blockchain, it cannot easily be changed or deleted. This makes the 
-technology useful for applications like supply chain tracking, digital identity 
-management, and document verification. Another important concept is 
-smart contracts. These are self-executing programs stored on the 
-blockchain that automatically perform actions when certain conditions are 
-met, such as transferring payment after a service is completed. Today, 
-blockchain is being explored in industries such as finance, healthcare, 
-logistics, and government services. Although it still faces challenges like 
-scalability and energy consumption, many experts believe blockchain will 
-play a major role in the future of digital systems and data management.” 
+CHATGPT:
+                                                   1). ZERO-SHOT PROMPT:
+         PROMPT PROVIDED:
+          “Summarize the above paragraph into 100 words using zero-shot prompting”
+          OUTPUT:
+            Blockchain technology is a secure and decentralized digital system used to record and store information across a network of computers called nodes. Unlike traditional databases controlled by a central authority, blockchain distributes data across many systems, reducing the risk of tampering and increasing trust. It consists of connected blocks containing transaction data, timestamps, and cryptographic hashes that ensure data integrity. Transactions are verified through consensus mechanisms such as proof of work or proof of stake. Blockchain provides transparency and immutability, making records difficult to change. Beyond cryptocurrencies like Bitcoin, it is used in areas such as supply chain tracking, digital identity, healthcare, logistics, and smart contracts.
 
-ANSWER GIVEN: 
 
-Blockchain technology is a decentralized digital system used to record and 
-store transactions securely across a network of computers. Instead of 
-relying on a central authority, the data is maintained by multiple nodes that 
-verify and update the shared record. Information is stored in blocks, and 
-each block is connected to the previous one using cryptographic hashes, 
-forming a secure chain of data. This structure makes it very diAicult to alter 
-previously recorded information. Blockchain uses consensus mechanisms 
-to validate transactions and ensure that all participants agree on the data 
-stored in the network. Key features of blockchain include transparency, 
-security, and immutability. Although blockchain became popular through 
-Bitcoin, it is now used in many fields such as supply chain management, 
-digital identity systems, and smart contracts to improve trust, eAiciency, 
-and reliability in digital transaction.” 
 
-Prompt given for Few shot: 
-Example 1 
-Input: 
-Artificial Intelligence (AI) refers to the ability of machines to perform tasks 
-that normally require human intelligence. It includes learning from data, 
-recognizing patterns, and making decisions. AI is used in many fields such 
-as healthcare, education, and transportation. 
-Output: 
-Artificial Intelligence is a technology that enables machines to perform 
-tasks that usually require human intelligence. It can learn from data, 
-identify patterns, and make decisions. AI is widely used in areas such as 
-healthcare, education, and transportation to improve eAiciency and 
-accuracy. 
+                                                      2). FEW-SHOT PROMPT:
+               PROMPT PROVIDED:
+                 “Summarize the above paragraph int 100 words using few-shot prompting”
+                 OUTPUT:
+                   Example 1:
+                       Input: Artificial Intelligence helps machines perform tasks that                          normally require human intelligence.
+                      Output: Artificial Intelligence enables machines to perform tasks like learning, reasoning, and decision-making similar to humans.
+                    Example 2:
+                        Input: Cloud computing allows users to store and access data over the internet instead of local computers.
+                        Output: Cloud computing enables users to store, manage, and access data online instead of using local storage.
+Now applying the same pattern to the given paragraph:
+Blockchain technology is a decentralized system used to securely record and store digital transactions across a network of computers. Instead of relying on a central authority, multiple nodes verify and maintain shared records, increasing transparency and trust. Each block contains transaction data, a timestamp, and a cryptographic hash linking it to the previous block, making tampering extremely difficult. Consensus mechanisms such as proof of work or proof of stake validate transactions. Blockchain also supports smart contracts that automatically execute agreements when conditions are met. Initially popular through cryptocurrencies like Bitcoin, blockchain is now used in industries such as finance, healthcare, logistics, digital identity, and document verification.
+                                                           3). CHAIN OF THOUGHTS:
+                   PROMPT PROVIDED:
+                    “Summarize the above paragraph into 100 words using chain of thoughts prompting”
+                   OUTPUT:
+                   Short approach:
+                       Identify the main ideas (blockchain definition, structure of blocks,                       decentralization, security, consensus, and applications) and combine them into a concise 100-word summary.
+                      Summary (100 words):
+Blockchain technology is a decentralized digital system used to securely record and store information across a network of computers called nodes. Instead of relying on a central authority, transactions are verified collectively through consensus mechanisms such as proof of work or proof of stake. Data is stored in blocks that contain transaction details, timestamps, and cryptographic hashes linking them to previous blocks, forming a secure chain. This structure makes altering information extremely difficult, ensuring transparency and immutability. Initially known for supporting cryptocurrencies like Bitcoin, blockchain is now applied in many fields, including finance, healthcare, logistics, digital identity, document verification, and automated smart contracts.
+                                                      4). ROLE BASED:
+               PROMPT PROVIDED:
+               “Summarize the above paragraph into 100 words by role-based prompting”
+              OUTPUT:
+              Role:  college Student
+Blockchain technology is a digital system used to securely record and store information in a decentralized way. Instead of being controlled by a single authority like a bank, it works through a network of computers called nodes that verify and share transaction records. Information is stored in blocks that contain transaction details, timestamps, and a cryptographic hash linking each block to the previous one, forming a chain. This structure makes the data transparent and difficult to change. Blockchain became popular through cryptocurrencies like Bitcoin, but it is also used in areas such as finance, healthcare, logistics, digital identity, document verification, and smart contracts.
+PERPLEXITY:
+                                                   1). ZERO-SHOT PROMPT:
+               PROMPT PROVIDED:
+              “Summarize the above paragraph into 100 words using zero-shot prompting”
+                 OUTPUT:
+                 Blockchain technology records and stores data securely, transparently, and decentral across a network of computers (nodes), unlike centralized databases. It gained fame via Bitcoin but extends to diverse applications. Blocks form a chronological chain, each holding transactions, timestamps, and a unique hash linking to the prior block—making tampering evident and nearly impossible without altering the entire chain.
+Key features include decentralization (consensus via proof-of-work/stake verifies transactions), transparency, and immutability. Smart contracts automate actions on predefined conditions. Used in finance, healthcare, logistics, and more, it faces scalability and energy hurdles but promises to transform digital systems.
+(98 words)
+                                                           2). FEW-SHOT PROMPT:
+               PROMPT PROVIDED:      
+                 “Summarize this paragraph into 100 words using few-shot prompting”
+                 OUTPUT:
+Example 1: Summarizing Climate Change
+Input: "Climate change refers to long-term shifts in temperatures and weather patterns... caused mainly by human activities..." (long para).
+Output: Climate change involves rising global temperatures from greenhouse gases due to fossil fuels, deforestation. Impacts include extreme weather, sea rise, biodiversity loss. Mitigation needs emission cuts, renewables. (45 words)
+Example 2: Summarizing AI Ethics
+Input: "AI ethics addresses moral issues in artificial intelligence development... bias, privacy, job displacement..."
+Output: AI ethics tackles bias in algorithms, data privacy, accountability, and societal impacts like unemployment. Guidelines promote fairness, transparency, human oversight. (32 words)
+Example 3: Summarizing Quantum Computing
+Input: "Quantum computing uses qubits for massive parallelism unlike classical bits... applications in cryptography, drug discovery..."
+Output: Quantum computing leverages qubits for exponential speed in complex problems like optimization and simulation, threatening current encryption but advancing medicine. Scalability challenges remain. (28 words)
 
-Example 2 
-Input: 
-Cloud computing is a technology that allows users to store and access 
-data over the internet instead of on local computers. It provides services 
-such as storage, servers, and software through online platforms. Cloud 
-computing helps organizations reduce costs and improve accessibility. 
-Output: 
-Cloud computing allows users to store and access data through the 
-internet rather than using local devices. It provides services like storage, 
-servers, and software online. This technology helps businesses reduce 
-costs, improve flexibility, and access information from anywhere. 
 
-Now summarize the following text: 
-Input Text: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for 
-many other applications beyond digital currency. 
-A blockchain is made up of digital blocks connected in chronological order. 
-Each block contains transaction data, a timestamp, and a cryptographic 
-hash that links it to the previous block. If someone changes the data in a 
-block, the hash changes, alerting the network to possible tampering. 
-Because all blocks are connected, altering one block would require 
-changing all subsequent blocks across the network, which is extremely 
-diAicult. Blockchain uses a decentralized verification process called 
-consensus, where network participants confirm transactions instead of a 
-central authority. Mechanisms such as proof of work or proof of stake help 
-validate transactions before they are permanently recorded. Blockchain 
-also provides transparency and immutability, meaning records are visible 
-to participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems.” 
 
-Output text: 
-Blockchain technology is a decentralized digital system used to securely 
-store and record information across a network of computers. Instead of 
-relying on a central authority like a bank, multiple computers called nodes 
-verify and maintain shared transaction records. Data is stored in blocks 
-that are linked together in chronological order using cryptographic hashes, 
-forming a secure chain. If any data in a block is changed, the hash also 
-changes, alerting the network to possible tampering. Blockchain uses 
-consensus mechanisms such as proof of work or proof of stake to validate 
-transactions before they are permanently recorded. Key features of 
-blockchain include transparency, security, and immutability. The 
-technology became widely known through Bitcoin, but it is now used in 
-many sectors such as finance, healthcare, logistics, and government 
-services. Smart contracts further enhance blockchain by automatically 
-executing agreements when specific conditions are met.
 
-Prompt given for chain of thoughts: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for 
-many other applications beyond digital currency. A blockchain is made up 
-of a series of digital blocks that are connected together in chronological 
-order to form a chain. Each block contains a set of transaction data, a 
-timestamp, and a unique cryptographic code called a hash. This hash links 
-the current block to the previous one, creating a secure chain of records. If 
-someone attempts to change the data in a block, the hash will also change, 
-which alerts the network that tampering has occurred. Because every 
-block is connected to the one before it, altering a single block would 
-require changing all subsequent blocks in the chain across many 
-computers in the network. This process is extremely diAicult, which makes 
-blockchain highly secure and reliable.One of the key features of blockchain 
-technology is decentralization. In traditional systems, a central authority 
-controls the database and verifies transactions. In blockchain systems, 
-however, transaction verification is carried out collectively by the network 
-participants through a process called consensus. DiAerent blockchain 
-systems use diAerent consensus mechanisms, such as proof of work or 
-proof of stake, to confirm that transactions are valid. Once verified, the 
-transaction is added to a block and permanently recorded on the 
-blockchain. This decentralized approach eliminates the need for 
-intermediaries and can reduce costs and processing time. Blockchain 
-technology also provides transparency and immutability. Transparency 
-means that all participants in the network can view the recorded 
-transactions, which helps build trust among users. Immutability means 
-that once information is recorded on the blockchain, it cannot easily be 
-changed or deleted. These features make blockchain useful in situations 
-where secure and verifiable records are required. For example, 
-organizations can use blockchain to track supply chains, manage digital 
-identities, or verify important documents. Another important concept 
-related to blockchain is smart contracts. Smart contracts are self
-executing programs stored on the blockchain that automatically carry out 
-actions when specific conditions are met. For instance, a smart contract 
-could automatically transfer payment once a service has been completed. 
-This reduces the need for manual processing and ensures that agreements 
-are executed exactly as programmed. Today, blockchain technology is 
-being explored in many industries, including finance, healthcare, logistics, 
-and government services. It has the potential to improve security, 
-eAiciency, and transparency in digital transactions. Although the 
-technology is still evolving and faces challenges such as scalability and 
-energy consumption, many experts believe that blockchain will play an 
-important role in the future of digital systems and data management.” 
+OUTPUT:
+Blockchain is a decentralized ledger recording transactions across nodes in linked blocks with hashes, ensuring security and tamper-proofing via consensus (proof-of-work/stake). Transparent and immutable, it supports smart contracts for automation. Beyond crypto like Bitcoin, it's applied in supply chains, identity, healthcare; challenges include scalability, energy use. (68 words)
+                                                     	3). CHAIN OF THOUGHTS:
+PROMPT PROVIDED:
+“Summarize the above paragraph using few-shot prompting”
+OUTPUT:
+1.	Identify core topic: The paragraph explains blockchain basics—decentralized, secure data storage via distributed nodes, blocks chained by hashes.
+2.	Key components: Structure (blocks, hashes, timestamps); security (tamper-evident chain); features (decentralization, consensus like PoW/Pos, transparency, immutability, smart contracts).
+3.	History/applications: Originated with Bitcoin/crypto; now in supply chain, identity, finance, healthcare; challenges (scalability, energy).
+4.	Condense to essentials: Focus on definition, how it works, benefits, uses, limitations—aim for ~100 words, clear language.
+5.	Structure output: Start with definition, mechanics, features, apps, challenges for flow.
+    OUTPUT:
+Blockchain technology enables secure, transparent, decentralized data recording across computer networks (nodes), unlike central databases. Transactions form chronological blocks linked by cryptographic hashes and timestamps—altering one invalidates the chain, preventing tampering. Consensus mechanisms (e.g., proof-of-work, proof-of-stake) validate additions collectively. Immutable and viewable by all, it fosters trust via smart contracts that auto-execute on conditions. Popularized by Bitcoin, it's expanding to supply chains, digital IDs, healthcare, finance. Despite scalability and energy drawbacks, blockchain promises to revolutionize data management.
+	
+                                                         
 
-ANSWER GIVEN:
-Blockchain technology is a decentralized digital system used to securely 
-record and store transactions across a network of computers. Instead of 
-relying on a central authority, multiple computers called nodes verify and 
-maintain shared transaction records. Information is stored in blocks that 
-are connected in chronological order to form a chain. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block, making the system secure and diAicult to modify. 
-Blockchain uses consensus mechanisms such as proof of work or proof of 
-stake to validate transactions before they are permanently recorded. Key 
-features of blockchain include decentralization, transparency, and 
-immutability. The technology became widely known through Bitcoin, but it 
-is also used in many areas such as supply chain management, digital 
-identity verification, smart contracts, and other industries to improve 
-security and eAiciency. 
+                                                           4). ROLE BASED:
+PROMPT PROVIDED:
+“Summarize the above paragraph into 100 words using role based”
+OUTPUT:
+ Role: College Student
+Hey, so blockchain is basically this super-secure digital ledger that spreads info across tons of computers instead of one boss like a bank. No single point of failure—nodes all check each other. Each "block" has transactions, time stamp, and a hash code that chains to the last one; mess with it, and everyone knows cause the hash breaks.
+It's decentralized, so we use stuff like proof-of-work to agree on what's real. Transparent, can't delete stuff once added, and smart contracts auto-do things like pay up when conditions hit. Bitcoin made it famous, but now it's for tracking shipments, IDs, health records. Scalability and power use are issues, but future's bright! (99 words)
+COPILOT:
+	1). ZERO-SHOT PROMPT:
+PROMPT PROVIDED:
+“Summarize the above paragraph into 100 words using zero shot prompting”
+OUTPUT:
+Blockchain is a decentralized digital system that securely records and stores information across a network of computers, reducing risks of tampering and increasing trust. Unlike traditional databases controlled by central authorities, blockchain uses nodes to verify transactions through consensus mechanisms like proof of work or proof of stake. Data is stored in linked blocks containing transaction details, timestamps, and cryptographic hashes, making records immutable and transparent. Smart contracts enable automated actions when conditions are met. Beyond cryptocurrencies, blockchain is applied in supply chains, healthcare, finance, and government, though challenges like scalability and energy use remain.
+	
 
-Prompt given for role based: 
-Role: You are a technology educator explaining complex topics to 
-undergraduate students. 
+                                                    2). FEW-SHOT PROMPT:
+PROMPT PROVIDED:
+“Summarize the above paragraph into 100 words using few shot prompting”
+OUTPUT:
+Example 1:
+Cloud computing allows data storage and processing over the internet instead of local servers. It offers scalability, flexibility, and cost efficiency, enabling businesses to access resources on demand.
+Example 2:
+Artificial intelligence simulates human intelligence in machines. It powers applications like speech recognition, recommendation systems, and autonomous vehicles, transforming industries through automation and data analysis.
+Final Output (Blockchain):
+Blockchain is a decentralized system that records data securely across a network of nodes. Transactions are verified through consensus mechanisms and stored in linked blocks with cryptographic hashes, ensuring transparency and immutability. Smart contracts automate actions when conditions are met. Beyond cryptocurrencies, blockchain supports supply chain tracking, digital identity, and government services. Despite challenges like scalability and energy use, it promises transformative applications in finance, healthcare, and logistics.
+	3). CHAIN OF THOUGHTS:
+PROMPT PROVIDED:
+“Summarize the above paragraph into 100 words using chain of thoughts”
+OUTPUT:
+1.	Identify core ideas: Blockchain is decentralized, secure, transparent, immutable, and uses consensus mechanisms.
+2.	Key components: Blocks contain data, timestamps, and hashes linking them together. Tampering is difficult because altering one block requires changing all subsequent ones.
+3.	Features: Decentralization, transparency, immutability, and smart contracts.
+4.	Applications: Cryptocurrencies, supply chain, identity management, finance, healthcare, logistics, government.
+5.	Challenges: Scalability and energy consumption.
+6.	Goal: Condense all of this into ~100 words.
+Final Summary (100 words):
+Blockchain is a decentralized digital system that securely records transactions across a distributed network of nodes. Each block contains data, a timestamp, and a cryptographic hash linking it to the previous block, making tampering extremely difficult. Consensus mechanisms like proof of work or proof of stake validate transactions collectively, ensuring transparency and immutability. Smart contracts enable automated execution when conditions are met. Initially popularized by cryptocurrencies, blockchain now supports supply chain tracking, digital identity, healthcare, finance, and government services. Despite challenges such as scalability and energy use, it is seen as a transformative technology for future data management.
 
-Task: Read the given passage and summarize it in 100–150 words using 
-simple and clear language. Focus on the main ideas of blockchain, how 
-it works, its key features, and its applications. 
-Input text: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for 
-many other applications beyond digital currency. A blockchain is made up 
-of a series of digital blocks that are connected together in chronological 
-order to form a chain. Each block contains a set of transaction data, a 
-timestamp, and a unique cryptographic code called a hash. This hash links 
-the current block to the previous one, creating a secure chain of records. If 
-someone attempts to change the data in a block, the hash will also change, 
-which alerts the network that tampering has occurred. Because every 
-block is connected to the one before it, altering a single block would 
-require changing all subsequent blocks in the chain across many 
-computers in the network. This process is extremely diAicult, which makes 
-blockchain highly secure and reliable. One of the key features of 
-blockchain technology is decentralization. In traditional systems, a central 
-authority controls the database and verifies transactions. In blockchain 
-systems, however, transaction verification is carried out collectively by the 
-network participants through a process called consensus. DiAerent 
-blockchain systems use diAerent consensus mechanisms, such as proof 
-of work or proof of stake, to confirm that transactions are valid. Once 
-verified, the transaction is added to a block and permanently recorded on 
-the blockchain. This decentralized approach eliminates the need for 
-intermediaries and can reduce costs and processing time. Blockchain 
-technology also provides transparency and immutability. Transparency 
-means that all participants in the network can view the recorded 
-transactions, which helps build trust among users. Immutability means 
-that once information is recorded on the blockchain, it cannot easily be 
-changed or deleted. These features make blockchain useful in situations 
-where secure and verifiable records are required. For example, 
-organizations can use blockchain to track supply chains, manage digital 
-identities, or verify important documents. Another important concept 
-related to blockchain is smart contracts. Smart contracts are self
-executing programs stored on the blockchain that automatically carry out 
-actions when specific conditions are met. For instance, a smart contract 
-could automatically transfer payment once a service has been completed. 
-This reduces the need for manual processing and ensures that agreements 
-are executed exactly as programmed. Today, blockchain technology is 
-being explored in many industries, including finance, healthcare, logistics, 
-and government services. It has the potential to improve security, 
-eAiciency, and transparency in digital transactions. Although the 
-technology is still evolving and faces challenges such as scalability and 
-energy consumption, many experts believe that blockchain will play an 
-important role in the future of digital systems and data management.” 
+	4). ROLE BASED:
+PROMPT PROVIDED:
+“Summarize the above paragraph into 100 words by role-based prompting”
+OUTPUT:
+Role: College Student
+Blockchain is a decentralized technology that records and secures data across a network of computers, called nodes, instead of relying on a central authority. Each block stores transaction details, timestamps, and cryptographic hashes that link it to the previous block, making tampering nearly impossible. Transactions are verified collectively through consensus mechanisms like proof of work or proof of stake, ensuring transparency and immutability. Smart contracts allow automatic execution of agreements when conditions are met. While blockchain gained fame through Bitcoin, it now supports supply chains, healthcare, finance, and government services, though challenges like scalability and energy consumption remain.
 
-Summary (100–150 words) 
 
-Blockchain technology is a decentralized digital system used to securely 
-record and store information across a network of computers. Instead of 
-relying on a central authority like a bank, multiple computers called node 
-verify and maintain transaction records. Data is stored in blocks that are 
-linked together in chronological order, forming a chain secured by 
-cryptographic hashes. If someone tries to change the data in a block, the 
-network can easily detect the alteration, making blockchain highly secure 
-and reliable. Transactions are verified through consensus mechanisms 
-such as proof of work or proof of stake. Key features of blockchain include 
-decentralization, transparency, and immutability. The technology became 
-widely known through Bitcoin, but it is also used in areas like supply chain 
-management, digital identity verification, and smart contracts to improve 
-trust, eAiciency, and security in digital systems.
 
-PERPLEXITY: 
 
-Prompt given for zero shot :
-
-Input text: 
-Summarize this para into 100-150 words: 
-“"Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of a 
-series of digital blocks that are connected together in chronological order 
-to form a chain. Each block contains a set of transaction data, a 
-timestamp, and a unique cryptographic code called a hash. This hash links 
-the current block to the previous one, creating a secure chain of records. If 
-someone attempts to change the data in a block, the hash will also change, 
-which alerts the network that tampering has occurred. Because every 
-block is connected to the one before it, altering a single block would 
-require changing all subsequent blocks in the chain across many 
-computers in the network. This process is extremely diAicult, which makes 
-blockchain highly secure and reliable. One of the key features of 
-blockchain technology is decentralization. In traditional systems, a central 
-authority controls the database and verifies transactions. In blockchain 
-systems, however, transaction verification is carried out collectively by the 
-network participants through a process called consensus. DiAerent 
-blockchain systems use diAerent consensus mechanisms, such as proof 
-of work or proof of stake, to confirm that transactions are valid. Once 
-verified, the transaction is added to a block and permanently recorded on 
-the blockchain. This decentralized approach eliminates the need for 
-intermediaries and can reduce costs and processing time. Blockchain 
-technology also provides transparency and immutability. Transparency 
-means that all participants in the network can view the recorded 
-transactions, which helps build trust among users. Immutability means 
-that once information is recorded on the blockchain, it cannot easily be 
-changed or deleted. These features make blockchain useful in situations 
-where secure and verifiable records are required. For example, 
-organizations can use blockchain to track supply chains, manage digital 
-identities, or verify important documents. Another important concept 
-related to blockchain is smart contracts. Smart contracts are self
-executing programs stored on the blockchain that automatically carry out 
-actions when specific conditions are met. For instance, a smart contract 
-could automatically transfer payment once a service has been completed. 
-This reduces the need for manual processing and ensures that agreements 
-are executed exactly as programmed. Today, blockchain technology is 
-being explored in many industries, including finance, healthcare, logistics, 
-and government services. It has the potential to improve security, 
-eAiciency, and transparency in digital transactions. Although the 
-technology is still evolving and faces challenges such as scalability and 
-energy consumption, many experts believe that blockchain will play an 
-important role in the future of digital systems and data management. "
-
-Output text: 
-Blockchain technology is a secure, transparent, decentralized digital ledger 
-that records transactions across a network of computers (nodes), unlike 
-centralized databases controlled by single authorities. Data is stored in 
-chronologically linked blocks, each containing transactions, a timestamp, 
-and a unique hash that connects it to the previous block. Altering any block 
-changes its hash, breaking the chain and alerting the network—making 
-tampering nearly impossible. Key features include decentralization via 
-consensus mechanisms (e.g., proof-of-work or proof-of-stake) for 
-transaction verification, eliminating intermediaries; transparency for all 
-participants to view records; and immutability to prevent changes. Smart 
-contracts enable self-executing agreements that automate actions when 
-conditions are met. Initially popularized by Bitcoin, blockchain now spans 
-f
-inance, healthcare, logistics, and more, enhancing security and eAiciency 
-despite challenges like scalability and energy use.  (128 words) 
-
-Prompt given for Few shot: 
-"Summarize the given passage into 100–150 words using simple language 
-suitable for undergraduate students. 
-Below are examples of how the summary should look. 
-Example 1 
-Input: 
-Artificial Intelligence (AI) refers to the ability of machines to perform tasks 
-that normally require human intelligence. It includes learning from data, 
-recognizing patterns, and making decisions. AI is used in many fields such 
-as healthcare, education, and transportation. 
-Output: 
-Artificial Intelligence is a technology that enables machines to perform 
-tasks that usually require human intelligence. It can learn from data, 
-identify patterns, and make decisions. AI is widely used in areas such as 
-healthcare, education, and transportation to improve eAiciency and 
-accuracy. 
-Example 2 
-Input: 
-Cloud computing is a technology that allows users to store and access 
-data over the internet instead of on local computers. It provides services 
-such as storage, servers, and software through online platforms. Cloud 
-computing helps organizations reduce costs and improve accessibility. 
-
-Output: 
-Cloud computing allows users to store and access data through the 
-internet rather than using local devices. It provides services like storage, 
-servers, and software online. This technology helps businesses reduce 
-costs, improve flexibility, and access information from anywhere. 
-Now summarize the following text: 
-Input Text: 
-Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems.” 
-
-Output text: 
-Blockchain technology is a secure, decentralized way to record and store 
-data across many computers, called nodes, instead of using a central 
-authority like a bank. This shared network verifies transactions together, 
-reducing tampering risks and building trust. Data lives in blocks linked 
-chronologically by unique cryptographic hashes. Changing one block alters 
-its hash, breaking the chain and alerting everyone—making edits nearly 
-impossible without controlling most of the network. Transactions get 
-verified through consensus methods like proof-of-work or proof-of-stake, 
-then added permanently. Blockchain oAers transparency (everyone sees 
-records) and immutability (no easy changes). Smart contracts automate 
-actions when conditions are met, like releasing payment after delivery. 
-Famous from Bitcoin, it's now used in finance, healthcare, logistics, and 
-more for better security and eAiciency, despite issues like high energy use. 
-(132 words) 
-
-Prompt given for chain of thoughts: 
-Input text: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems.” 
-
-Output text: 
-Step 1: Identify main topic and structure. 
-The passage explains blockchain basics: definition, how it diAers from 
-traditional systems, block structure, security via hashes, consensus, 
-features (transparency, immutability), smart contracts, applications, and 
-challenges. 
-Step 2: Extract key points without details. 
- Decentralized network of nodes for secure, shared transaction 
-records. 
- Blocks linked by hashes for tamper-proof chain. 
- Consensus (e.g., proof-of-work/stake) verifies transactions. 
- Transparency, immutability; smart contracts automate actions. 
- From Bitcoin to uses in finance/healthcare/etc.; scalability/energy 
-issues. 
-Step 3: Group into logical flow. 
-Intro (what it is/why better), mechanics (blocks/hashes/consensus), 
-benefits (features/smart contracts), real-world use/challenges. 
-Step 4: Write concise summary in simple language, aiming 
-100-150 words. 
-Count words to fit; use active voice, short sentences for undergrad level. 
-Blockchain is a secure, decentralized digital ledger that records 
-transactions across a network of computers (nodes), unlike central 
-databases run by banks. Nodes collaborate to verify and store data, 
-minimizing tampering and boosting trust. It gained fame with Bitcoin but 
-now applies widely beyond crypto. Each block holds transactions, a 
-timestamp, and a hash linking to the prior block. Tampering changes the 
-hash, breaking the chain—requiring network-wide updates, which is nearly 
-impossible. Consensus mechanisms like proof-of-work or proof-of-stake 
-validate transactions for permanent addition. Features include 
-transparency (viewable records) and immutability (unchangeable data). 
-Smart contracts auto-execute when conditions met, like payments on 
-delivery. Used in finance, healthcare, logistics; faces scalability and energy 
-hurdles but promises big future impact. (138 words) 
-
-Prompt given for role based: 
-Input text: 
-Assuming role: Role: You are a technology educator explaining 
-complex topics to undergraduate students. 
-Key elements to cover: Core definition, decentralization vs. central 
-systems, block structure/security, consensus, features, smart contracts, 
-applications, challenges. 
-Structure summary: Start with what/why, explain how it works, 
-highlight benefits/uses, end with future outlook. Keep 100-150 words, 
-everyday language. 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems."
-
-Output text: 
-Blockchain acts like a tamper-proof digital notebook shared across many 
-computers, not controlled by one boss like a bank. These computers, or 
-nodes, team up to record and check transactions securely, spreading data 
-everywhere to prevent hacks and build trust. It shot to fame with Bitcoin 
-but now powers much more. Picture blocks of info chained together by 
-special codes called hashes—change one, and the whole chain breaks, 
-alerting everyone. Nodes use "consensus" rules (like proof-of-work or 
-stake) to agree on valid transactions before locking them in forever. It 
-shines with openness (anyone sees records), unchangeability, and smart 
-contracts that auto-run deals, like paying for goods on arrival. Industries 
-like finance, health, and shipping love it for speed and safety, though 
-scaling up and energy use are hurdles. Blockchain will reshape our digital 
-world. (142 words) 
-
-CLAUDE: 
-
-Prompt given for zero shot: 
-Input text: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of a 
-series of digital blocks that are connected together in chronological order 
-to form a chain. Each block contains a set of transaction data, a 
-timestamp, and a unique cryptographic code called a hash. This hash links 
-the current block to the previous one, creating a secure chain of records. If 
-someone attempts to change the data in a block, the hash will also change, 
-which alerts the network that tampering has occurred. Because every 
-block is connected to the one before it, altering a single block would 
-require changing all subsequent blocks in the chain across many 
-computers in the network. This process is extremely diAicult, which makes 
-blockchain highly secure and reliable One of the key features of blockchain 
-technology is decentralization. In traditional systems, a central authority 
-controls the database and verifies transactions. In blockchain systems, 
-however, transaction verification is carried out collectively by the network 
-participants through a process called consensus. DiAerent blockchain 
-systems use diAerent consensus mechanisms, such as proof of work or 
-proof of stake, to confirm that transactions are valid. Once verified, the 
-transaction is added to a block and permanently recorded on the 
-blockchain. This decentralized approach eliminates the need for 
-intermediaries and can reduce costs and processing time. Blockchain 
-technology also provides transparency and immutability. Transparency 
-means that all participants in the network can view the recorded 
-transactions, which helps build trust among users. Immutability means 
-that once information is recorded on the blockchain, it cannot easily be 
-changed or deleted. These features make blockchain useful in situations 
-where secure and verifiable records are required. For example, 
-organizations can use blockchain to track supply chains, manage digital 
-identities, or verify important documents. Another important concept 
-related to blockchain is smart contracts. Smart contracts are self
-executing programs stored on the blockchain that automatically carry out 
-actions when specific conditions are met. For instance, a smart contract 
-could automatically transfer payment once a service has been completed. 
-This reduces the need for manual processing and ensures that agreements 
-are executed exactly as programmed. Today, blockchain technology is 
-being explored in many industries, including finance, healthcare, logistics, 
-and government services. It has the potential to improve security, 
-eAiciency, and transparency in digital transactions. Although the 
-technology is still evolving and faces challenges such as scalability and 
-energy consumption, many experts believe that blockchain will play an 
-important role in the future of digital systems and data management.” 
-
-Output text: 
-Blockchain is a decentralized digital ledger that records transactions 
-across a peer-to-peer network without a central authority. Data is stored in 
-encrypted "blocks" cryptographically linked in sequence, forming a chain. 
-Transactions are validated through consensus mechanisms like Proof of 
-Work or Proof of Stake, then added to the chain with a unique hash. 
-Because each block contains the previous block's hash, altering past data 
-breaks the chain, making tampering immediately detectable. Key strengths 
-include transparency, immutability, and security. Modern blockchains also 
-support smart contracts — self-executing programs that automate 
-agreements without intermediaries. Networks can be public, private, 
-consortium, or hybrid. Blockchain has evolved through three generations: 
-cryptocurrency, smart contracts, and enterprise scalability. Today, its 
-applications extend well beyond finance into healthcare, supply chain, and 
-digital identity, oAering businesses a trusted, eAicient single source of 
-truth. 
-
-Prompt given for Few shot: 
-Input text: 
-“"Summarize the given passage into 100–150 words using simple language 
-suitable for undergraduate students. 
-Below are examples of how the summary should look. 
-Example 1 
-Input: 
-Artificial Intelligence (AI) refers to the ability of machines to perform tasks 
-that normally require human intelligence. It includes learning from data, 
-recognizing patterns, and making decisions. AI is used in many fields such 
-as healthcare, education, and transportation. 
-Output: 
-Artificial Intelligence is a technology that enables machines to perform 
-tasks that usually require human intelligence. It can learn from data, 
-identify patterns, and make decisions. AI is widely used in areas such as 
-healthcare, education, and transportation to improve eAiciency and 
-accuracy. 
-Example 2 
-Input: 
-Cloud computing is a technology that allows users to store and access 
-data over the internet instead of on local computers. It provides services 
-such as storage, servers, and software through online platforms. Cloud 
-computing helps organizations reduce costs and improve accessibility. 
-Output: 
-Cloud computing allows users to store and access data through the 
-internet rather than using local devices. It provides services like storage, 
-servers, and software online. This technology helps businesses reduce 
-costs, improve flexibility, and access information from anywhere. 
-Now summarize the following text: 
-Input Text: 
-Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems.”  
-
-Output text: 
-Blockchain technology is a secure, decentralized way to record and store 
-data across many computers, called nodes, instead of using a central 
-authority like a bank. This shared network verifies transactions together, 
-reducing tampering risks and building trust. Data lives in blocks linked 
-chronologically by unique cryptographic hashes. Changing one block alters 
-its hash, breaking the chain and alerting everyone—making edits nearly 
-impossible without controlling most of the network. Transactions get 
-verified through consensus methods like proof-of-work or proof-of-stake, 
-then added permanently. Blockchain oAers transparency (everyone sees 
-records) and immutability (no easy changes). Smart contracts automate 
-actions when conditions are met, like releasing payment after delivery. 
-Famous from Bitcoin, it's now used in finance, healthcare, logistics, and 
-more for better security and eAiciency, despite issues like high energy use. 
-
-Prompt given for chain of thoughts: 
-Input text: 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems.” 
-
-Output text: 
-Step 1: Identify main topic and structure. 
-The passage explains blockchain basics: definition, how it diAers from 
-traditional systems, block structure, security via hashes, consensus, 
-features (transparency, immutability), smart contracts, applications, and 
-challenges. 
-Step 2: Extract key points without details. 
- Decentralized network of nodes for secure, shared transaction 
-records. 
- Blocks linked by hashes for tamper-proof chain. 
- Consensus (e.g., proof-of-work/stake) verifies transactions. 
- Transparency, immutability; smart contracts automate actions. 
- From Bitcoin to uses in finance/healthcare/etc.; scalability/energy 
-issues. 
-Step 3: Group into logical flow. 
-Intro (what it is/why better), mechanics (blocks/hashes/consensus), 
-benefits (features/smart contracts), real-world use/challenges. 
-Step 4: Write concise summary in simple language, aiming 
-100-150 words. 
-Count words to fit; use active voice, short sentences for undergrad level. 
-Blockchain is a secure, decentralized digital ledger that records 
-transactions across a network of computers (nodes), unlike central 
-databases run by banks. Nodes collaborate to verify and store data, 
-minimizing tampering and boosting trust. It gained fame with Bitcoin but 
-now applies widely beyond crypto. Each block holds transactions, a 
-timestamp, and a hash linking to the prior block. Tampering changes the 
-hash, breaking the chain—requiring network-wide updates, which is nearly 
-impossible. Consensus mechanisms like proof-of-work or proof-of-stake 
-validate transactions for permanent addition. Features include 
-transparency (viewable records) and immutability (unchangeable data). 
-Smart contracts auto-execute when conditions met, like payments on 
-delivery. Used in finance, healthcare, logistics; faces scalability and energy 
-hurdles but promises big future impact. 
-
-Prompt given for role based: 
-Input text: 
-Assuming role: Role: You are a technology educator explaining 
-complex topics to undergraduate students. 
-Key elements to cover: Core definition, decentralization vs. central 
-systems, block structure/security, consensus, features, smart contracts, 
-applications, challenges. 
-Structure summary: Start with what/why, explain how it works, 
-highlight benefits/uses, end with future outlook. Keep 100-150 words, 
-everyday language. 
-“Blockchain technology is a digital system used to record and store 
-information in a secure, transparent, and decentralized way. Unlike 
-traditional databases that are controlled by a central authority such as a 
-bank or organization, blockchain operates on a distributed network of 
-computers. These computers, often called nodes, work together to 
-maintain and verify a shared record of transactions. Because the data is 
-distributed across many systems rather than stored in a single location, 
-blockchain reduces the risk of data tampering and increases trust among 
-users. The technology first became widely known through 
-cryptocurrencies, especially Bitcoin, but today it is being explored for many 
-other applications beyond digital currency. A blockchain is made up of 
-digital blocks connected in chronological order. Each block contains 
-transaction data, a timestamp, and a cryptographic hash that links it to the 
-previous block. If someone changes the data in a block, the hash changes, 
-alerting the network to possible tampering. Because all blocks are 
-connected, altering one block would require changing all subsequent 
-blocks across the network, which is extremely diAicult. Blockchain uses a 
-decentralized verification process called consensus, where network 
-participants confirm transactions instead of a central authority. 
-Mechanisms such as proof of work or proof of stake help validate 
-transactions before they are permanently recorded. Blockchain also 
-provides transparency and immutability, meaning records are visible to 
-participants and cannot easily be changed. Additionally, blockchain 
-supports smart contracts, which are self-executing programs that 
-automatically perform actions when certain conditions are met. Today, 
-blockchain is used in industries like finance, healthcare, logistics, and 
-government services. Although challenges such as scalability and energy 
-consumption remain, blockchain is expected to play a significant role in 
-future digital systems."    
-
-Output text: 
-Blockchain acts like a tamper-proof digital notebook shared across many 
-computers, not controlled by one boss like a bank. These computers, or 
-nodes, team up to record and check transactions securely, spreading data 
-everywhere to prevent hacks and build trust. It shot to fame with Bitcoin 
-but now powers much more. Picture blocks of info chained together by 
-special codes called hashes—change one, and the whole chain breaks, 
-alerting everyone. Nodes use "consensus" rules (like proof-of-work or 
-stake) to agree on valid transactions before locking them in forever. It 
-shines with openness (anyone sees records), unchangeability, and smart 
-contracts that auto-run deals, like paying for goods on arrival. Industries 
-like finance, health, and shipping love it for speed and safety, though 
-scaling up and energy use are hurdles. Blockchain will reshape our digital 
-world. 
-RESULT: 
-```
-Factor               ChatGPT            Perplexity          Claude
-                                                  
-Accuracy              9/10               8.5/10              9.5/10
-
-Coherence             9/10               8/10                9.5/10
- 
-Simplicity            9/10               8.5/10              8.5/10
-
-Speed                 9/10               9.5/10              8.5/10
-
-User Experience       9.5/10             8.5/10              9/10
-
-```
 RESULT:
-       Thus, the Summarization of text using different AI tools has been done.
+```
+Criteria	ChatGPT	  Perplexity 	Microsoft Copilot
+Accuracy	9/10	    9/10	     8/10
+Coherence	9/10	    8/10  	     8/10
+Simplicity	9/10	    8/10	     8/10
+Speed	        8/10	    9/10	     8/10
+User Experience	9/10	    8/10	     8/10
+```
+
+
 
