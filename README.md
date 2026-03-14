@@ -1,11 +1,11 @@
 EX-02-Cross-Platform-Prompting-Evaluating-Diverse-Techniques-in-AI-Powered-Text-Summarization.
 
 AI TOOLS USED IN THE EXPERIMENT ARE: 
-                                 • CHATGPT 
+                                        • CHATGPT 
                                         • PERPLEXITY 
                                         • CLAUDE 
 PROMPTS USED TO COMPARE THESE AI TOOLS ARE: 
-                                 • ZERO SHOT PROMPT 
+                                        • ZERO SHOT PROMPT 
                                         • FEW SHOT PROMPT 
                                         • CHAIN OF THOUGHTS 
                                         • ROLE BASED
