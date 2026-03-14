@@ -200,7 +200,7 @@ technology is still evolving and faces challenges such as scalability and
 energy consumption, many experts believe that blockchain will play an 
 important role in the future of digital systems and data management.” 
 
-Answer given: 
+ANSWER GIVEN:
 Blockchain technology is a decentralized digital system used to securely 
 record and store transactions across a network of computers. Instead of 
 relying on a central authority, multiple computers called nodes verify and 
